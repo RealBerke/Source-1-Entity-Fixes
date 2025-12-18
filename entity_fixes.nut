@@ -92,10 +92,9 @@ aEntityFixesInits <-
 				}
 			];
 
-			for (local iCheckNumber = 0; iCheckNumber <= 1; iCheckNumber++)
+			foreach (tCheck in aChecks)
 			{
-				local tCheck = aChecks[iCheckNumber],
-				vTargetPosition = NetProps.GetPropVector(self, tCheck.strPositionVariable);
+				local vTargetPosition = NetProps.GetPropVector(self, tCheck.strPositionVariable);
 
 				if (vOriginX != vTargetPosition.x || vOriginY != vTargetPosition.y || vOriginZ != vTargetPosition.z)
 					continue;
@@ -225,5 +224,6 @@ foreach (cEntityFixesFix in aEntityFixesInits)
 
 
 delete aEntityFixesInits;
+
 
 
