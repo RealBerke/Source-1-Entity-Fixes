@@ -151,7 +151,7 @@ aEntityFixesInits <-
 			if (flAnglePitch > -180 && flAnglePitch <= 180 && flAngleYaw > -180 && flAngleYaw <= 180 && flAngleRoll > -180 && flAngleRoll <= 180)
 				return 0;
 
-			flAnglePitch = flAnglePitch % 360;
+			flAnglePitch %= 360;
 
 			if (flAnglePitch <= -180)
 				flAnglePitch += 360;
@@ -159,7 +159,7 @@ aEntityFixesInits <-
 			else if (flAnglePitch > 180)
 				flAnglePitch -= 360;
 
-			flAngleYaw = flAngleYaw % 360;
+			flAngleYaw %= 360;
 
 			if (flAngleYaw <= -180)
 				flAngleYaw += 360;
@@ -167,7 +167,7 @@ aEntityFixesInits <-
 			else if (flAngleYaw > 180)
 				flAngleYaw -= 360;
 
-			flAngleRoll = flAngleRoll % 360;
+			flAngleRoll %= 360;
 
 			if (flAngleRoll <= -180)
 				flAngleRoll += 360;
@@ -224,6 +224,7 @@ foreach (cEntityFixesFix in aEntityFixesInits)
 
 
 delete aEntityFixesInits;
+
 
 
 
