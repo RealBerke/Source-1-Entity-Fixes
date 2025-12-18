@@ -149,7 +149,7 @@ aEntityFixesInits <-
 			flAngleYaw = qaAngle.Yaw(),
 			flAngleRoll = qaAngle.Roll();
 
-			if (flAnglePitch >= -180 && flAnglePitch < 180 && flAngleYaw >= -180 && flAngleYaw < 180 && flAngleRoll >= -180 && flAngleRoll < 180)
+			if (flAnglePitch > -180 && flAnglePitch <= 180 && flAngleYaw > -180 && flAngleYaw <= 180 && flAngleRoll > -180 && flAngleRoll <= 180)
 				return 0;
 
 			flAnglePitch = flAnglePitch % 360;
@@ -216,3 +216,4 @@ foreach (cEntityFixesFix in aEntityFixesInits)
 
 
 delete aEntityFixesInits;
+
