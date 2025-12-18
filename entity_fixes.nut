@@ -154,17 +154,26 @@ aEntityFixesInits <-
 
 			flAnglePitch = flAnglePitch % 360;
 
-			if (flAnglePitch > 180)
+			if (flAnglePitch <= -180)
+				flAnglePitch += 360;
+
+			else if (flAnglePitch > 180)
 				flAnglePitch -= 360;
 
 			flAngleYaw = flAngleYaw % 360;
 
-			if (flAngleYaw > 180)
+			if (flAngleYaw <= -180)
+				flAngleYaw += 360;
+
+			else if (flAngleYaw > 180)
 				flAngleYaw -= 360;
 
 			flAngleRoll = flAngleRoll % 360;
 
-			if (flAngleRoll > 180)
+			if (flAngleRoll <= -180)
+				flAngleRoll += 360;
+
+			else if (flAngleRoll > 180)
 				flAngleRoll -= 360;
 
 			self.SetLocalAngles(QAngle(flAnglePitch, flAngleYaw, flAngleRoll));
@@ -216,4 +225,5 @@ foreach (cEntityFixesFix in aEntityFixesInits)
 
 
 delete aEntityFixesInits;
+
 
