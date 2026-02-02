@@ -222,9 +222,4 @@ foreach (cEntityFixesFix in aEntityFixesInits)
 	if (cEntityFixesFix.Init())
 		break;
 
-
 delete aEntityFixesInits;
-
-
-
-
